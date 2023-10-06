@@ -27,8 +27,9 @@ class CuentaBancaria:
     
     @classmethod 
     def imprimir_instancias(cls):
-        for x in range (len(cls.cuentas_bancarias)):
-            print(f"Balance: {str(cls.cuentas_bancarias[x].balance)}, Tasa de interés: {str(cls.cuentas_bancarias[x].tasa_interes * 100)}")
+        for x in cls.cuentas_bancarias:
+            x.mostrar_info_cuenta()
+    
 
 cuenta1 = CuentaBancaria(1, 500)
 cuenta2 = CuentaBancaria(3, 200)
